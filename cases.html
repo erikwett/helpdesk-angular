@@ -1,0 +1,32 @@
+<div class="row">
+	<div class="col-sm-12">
+		<div class="panel panel-primary">
+			<div class="panel-heading clearfix">
+				<h4 class="panel-title pull-left" style="padding-top: 7.5px;">Cases</h4>
+
+					<div class="input-group pull-right">
+						<input ng-model="search" type="text" class="form-control" placeholder="Search">
+						<span id="searchclear" ng-click=" search = '';" class="glyphicon glyphicon-remove-circle"></span>
+
+				</div>
+			</div>
+			<div class="panel-body ">
+				<table class="table table-bordered table-striped">
+					<thead>
+					<tr>
+						<th ng-repeat="head in headers">
+							{{head}}
+						</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr ng-repeat="row in rows | filter:search | orderBy:orderProp:reverse">
+						<td ng-repeat="cell in row">{{cell.qText}}</td>
+					</tr>
+					</tbody>
+
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

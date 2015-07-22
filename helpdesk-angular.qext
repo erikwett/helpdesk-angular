@@ -1,0 +1,6 @@
+{
+	"type": "mashup",
+	"name": "Helpdesk Angular",
+	"description": "Angular based mashup. Sense 2.0 required",
+    "preview": "helpdesk-angular.png"
+}
